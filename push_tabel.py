@@ -10,13 +10,14 @@ using mysql connector we can connect to our mysql server and use queries to fetc
 
 
 # when we run server.py locally
+"""
+:param file_name: a csv file name
+:param mysql_conn: mysql connector, connected to the server
+:param cursor: cursor, matching to mysql_conn
+
+"""
 def push_csv_to_table(file_name, mysql_conn, cursor):
-    """
-    :param file_name: a csv file name
-    :param mysql_conn: mysql connector, connected to the server
-    :param cursor: cursor, matching to mysql_conn
-    :return:
-    """
+
     df = pd.read_csv(f"./BreakJsonToAllTables/{file_name}" + ".csv")
 
 

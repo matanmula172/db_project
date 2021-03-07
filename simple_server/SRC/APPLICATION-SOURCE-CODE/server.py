@@ -23,7 +23,7 @@ mysql = mysql.connector.connect(
 
 
 # # when we run server on the nova: delta-tomcat-vm
-# #
+#
 # mysql = mysql.connector.connect(
 #   host="mysqlsrv1.cs.tau.ac.il",
 #   user="DbMysql11",
@@ -35,18 +35,18 @@ mysql = mysql.connector.connect(
 def db_open_connection():
     global mysql
     if not mysql.is_connected():
-        mysql.connect(
-        host="localhost",
-        user="DbMysql11",
-        password="DbMysql11",
-        database="DbMysql11",
-        port="3305")
         # mysql.connect(
-        #   host="mysqlsrv1.cs.tau.ac.il",
-        #   user="DbMysql11",
-        #   password="DbMysql11",
-        #   database="DbMysql11",
-        # )
+        # host="localhost",
+        # user="DbMysql11",
+        # password="DbMysql11",
+        # database="DbMysql11",
+        # port="3305")
+        mysql.connect(
+          host="mysqlsrv1.cs.tau.ac.il",
+          user="DbMysql11",
+          password="DbMysql11",
+          database="DbMysql11",
+        )
 
 #### PAGES ###
 @app.route('/')
